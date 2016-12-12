@@ -71,8 +71,21 @@
     "instrument": false,
     "require": [
       "babel-register"
-    ]
+    ],
   },
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+
   "babel": {
     "presets": [
       "es2015"
